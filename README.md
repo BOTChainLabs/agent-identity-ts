@@ -14,17 +14,17 @@ BOT Chain **ERC-8004 Direct SDK**（TypeScript / Viem）。开发者用自有 EO
 ## 安装
 
 ```bash
-npm install @botchain/agent-identity@v0.1.0
+npm install @botchainlabs/agent-identity@0.1.0
 ```
 
-包名 scope 发版前与团队确认。Node.js ≥ 20。
+Node.js ≥ 20。公开源码： [agent-identity-ts](https://github.com/BOTChainLabs/agent-identity-ts)。
 
 ## 用法
 
 ```ts
 import { createWalletClient, http } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { createClient, TxError } from '@botchain/agent-identity';
+import { createClient, TxError } from '@botchainlabs/agent-identity';
 
 const client = await createClient(968); // 或 { rpcUrl: 'https://...' }
 const version = await client.getVersion();

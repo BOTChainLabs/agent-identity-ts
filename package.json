@@ -1,13 +1,32 @@
 {
-  "name": "@botchain/agent-identity",
+  "name": "@botchainlabs/agent-identity",
   "version": "0.1.0",
   "description": "BOT Chain ERC-8004 IdentityRegistry Direct SDK (TypeScript / Viem)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BOTChainLabs/agent-identity-ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BOTChainLabs/agent-identity-ts/issues"
+  },
+  "homepage": "https://github.com/BOTChainLabs/agent-identity-ts#readme",
+  "keywords": [
+    "botchain",
+    "erc-8004",
+    "identity",
+    "viem"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
       "default": "./dist/index.js"
     }
   },
@@ -21,17 +40,11 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json && mkdir -p dist/abi && cp src/abi/IdentityRegistry.json dist/abi/IdentityRegistry.json",
+    "check": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "keywords": [
-    "botchain",
-    "erc-8004",
-    "identity",
-    "viem"
-  ],
-  "license": "MIT",
   "dependencies": {
     "viem": "^2.37.0"
   },
